@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(ls \"/Users/mac/Desktop/T197 /4th Semester/System Dev. Project \\(2154\\)/MISC/geowho_ \\(1\\)/src/\")",
-      "Bash(cat \"/Users/mac/Desktop/T197 /4th Semester/System Dev. Project \\(2154\\)/MISC/geowho_ \\(1\\)/package.json\")"
-    ]
-  }
-}
