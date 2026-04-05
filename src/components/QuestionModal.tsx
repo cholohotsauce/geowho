@@ -24,15 +24,19 @@ export function QuestionModal({ isOpen, onClose, availableQuestions, onAskQuesti
         </div>
 
         <div className="p-4 overflow-y-auto flex-1 space-y-2">
-          {availableQuestions.map(q => (
-            <button
-              key={q.id}
-              onClick={() => onAskQuestion(q)}
-              className="w-full text-left px-4 py-3 bg-slate-50 rounded-xl text-sm font-medium text-slate-700 hover:bg-slate-200 transition-colors"
-            >
-              {q.text}
-            </button>
-          ))}
+          {availableQuestions.length === 0 ? (
+            <p className="text-sm text-slate-500 text-center py-6">No more questions available. Switch to Guess Mode.</p>
+          ) : (
+            availableQuestions.map(q => (
+              <button
+                key={q.id}
+                onClick={() => onAskQuestion(q)}
+                className="w-full text-left px-4 py-3 bg-slate-50 rounded-xl text-sm font-medium text-slate-700 hover:bg-slate-200 transition-colors"
+              >
+                {q.text}
+              </button>
+            ))
+          )}
         </div>
       </div>
     </div>
